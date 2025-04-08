@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="oform.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Heading as an Image -->
+        <a href="index.html"><header class="logo"><img src="./images/logo.png" alt="Website Logo"></header></a>
+        <!-- Navigation Buttons -->
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="another_page.html" class="nav-button">Another Page</a>
+        <a href="form.html" class="nav-button">Contact Me</a>
+        <a href="birthday.html" class="nav-button">Birthday</a>
+    </nav>
+
+    <!-- Page Content -->
+    <main>
+        <div class="contact-form">
+            <!-- Form named cOrder posting to contactForm cgi script -->
+            <form name="cOrder" action="/contactForm.cgi" method="post">
+                <!-- First name -->
+                <label for ="fName">First Name</label>
+                <input name="fName" id="fName" type="text" placeholder="Enter First Name" required/>
+                <!-- Last name -->
+                <label for ="lName">Last Name</label>
+                <input name="lName" id="lName" type="text" placeholder="Enter Last Name" required/>
+                <!-- Address -->
+                <label for ="street">Street Address</label>
+                <input name="street" id="street" type="text" placeholder="Enter Address" required/>
+                <!-- City -->
+                <label for ="city">City</label>
+                <input name="city" id="city" type="text" placeholder="Enter City" required/>
+                <!-- Province -->
+                <label for ="province">Province</label>
+                <input name="province" id="province" type="text" placeholder="Enter Province" required/>
+
+                <!-- Postal Code -->
+                <label for ="poscode">Postal Code</label>
+                <input name="poscode" id="poscode" type="text" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="A1A 1A1" required />
+
+                <!-- Phone Number -->
+                <label for ="phone">Phone Number</label>
+                <input name="phone" id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required/>
+
+                <!-- Selection List -->
+                <label for ="role">What's your role?
+                <select name="role" id ="role"> 
+                    <option value="student">Student </option>
+                    <option value="dancer">Dancer </option>
+                    <option value="Performer">Performer </option>
+                    <option value="Parent">Parent </option>
+                    <option value="other">Other </option>
+                </select>
+                </label>
+                <br>
+                <!-- Contact Checkbox-->
+                <label for="contact_me">
+                    <input type="checkbox" id="contact_me" name="contact_me" value="yes"> Yes, I agree to be contacted
+                </label>
+                <br>
+
+                 <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="10" cols="50" placeholder="Enter any additional comments here..."></textarea>
+
+                 <!-- Submit and Reset Buttons -->
+                <button class = "form-button" type="submit">Submit Details</button>
+                <button class = "form-button" type="reset">Cancel Details</button>
+                
+            </form>
+        </div>
+    </main>
+</body>
+</html>

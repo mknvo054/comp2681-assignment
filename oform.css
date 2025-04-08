@@ -1,0 +1,125 @@
+
+.contact-form {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+}
+
+form {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 1.1rem;
+}
+
+label {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 3px rgba(0,123,255,0.5);
+    outline: none;
+}
+
+input:invalid:not(:placeholder-shown)  {
+    background-color: rgb(255, 232, 233);
+}
+
+input:valid {
+    background-color: rgb(220, 255, 220);
+}
+
+#contact_me {
+    width: auto;
+}
+
+label {
+    display: block;
+    padding: 5px;
+}
+
+.form-button {
+  background-color: #ECECEC;
+  color: #333333;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border-width: 0;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 12px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-button:hover {
+    background-color: #979797;
+    color: #333;
+    
+}
+
+
+/* 📱 Mobile Responsive Styles */
+@media (max-width: 768px) { /* Tablets and smaller devices */
+    form {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0 5%;
+        padding: 15px;
+    }
+
+    input, textarea {
+        font-size: 1rem;
+        width: 80%;
+    }
+
+    .form-button {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile Phones */
+    form {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .contact-form {
+        width: 95%;
+        padding: 10px;
+    }
+
+    input, textarea {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    .form-button {
+        padding: 6px 8px;
+    }
+}

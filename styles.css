@@ -1,0 +1,193 @@
+/* COMP 2681 - Assignment 4
+Name: Minh Vo - T00760459
+This CSS creates a modern, soft-themed responsive webpage with a flexible nav bar, visually distinct content areas, 
+and mobile-friendly layouts using flexbox, media queries, and styled components.
+*/
+
+/* Color Scheme */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav {
+    background-color: #ECECEC;
+    /* Light background */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.nav-button {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #f5f5f5;
+    /* Slightly darker for visibility */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: #979797;
+    color: #333;
+}
+
+
+header {
+    text-align: center;
+}
+
+.logo img {
+    height: 100px;
+    /* Adjust logo size */
+    margin-right: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #3b3b3b;
+    font-size: 2.3em;
+    float: left;
+    margin: 1rem;
+}
+
+p {
+    font-size: 1.1em;
+    /* 14px/16=0.875em */
+}
+
+body {
+    background: url('./images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.list-container {
+    background-color: #ECECEC;
+    position: relative;
+    left: 0;
+    right: 0;
+    min-width: 300px;
+    max-width: 800px;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-style: dashed;
+}
+
+.list-content {
+    margin: 15px;
+    font-size: 1.1em;
+}
+
+ul {
+    padding: 15px;
+
+    border-radius: 5px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.another-content p {
+    clear: left;
+}
+
+/* Birthday page CSS */
+/* each element appears on a separate line on birthday page*/
+.birthday-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    background-color: #ECECEC;
+    left: 0;
+    right: 0;
+    min-width: 300px;
+    max-width: 80%;
+    margin-left: 10%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-style: dashed;
+}
+
+audio, video {
+    margin-bottom: 1rem;
+}
+
+/* Mobile Responsive Styles */
+/* reduce font size, width, height and margin/padding to match smaller screensize */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em; 
+        float: none;
+        text-align: center;
+    }
+
+
+    .nav-button {
+        margin: 5px 0;
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+
+    .list-container, .birthday-content {
+        width: 90%;
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: auto;
+        padding: 5px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    video {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
+      }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .list-container, .birthday-content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .nav-button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+
+    .logo img {
+        height: 50px;
+    }
+
+    video {
+        max-width: 95%;
+        height: auto;
+      }
+}
